@@ -1,0 +1,103 @@
+/* основний колір тексту #757575; */
+/* Допоміжний колір тексту  #212121; */
+/* колір фону #F5F5F5 */
+/* колір фону хедера  #FFFFFF; */
+/* колір фону футера #2F303A; */
+
+/* текст лого #000000 */
+
+/* колір акценту  #2196F3 */
+/* колір контактів футера  rgba(255, 255, 255, 0.6); */
+
+/* колір лого background: linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #2196F3, #2196F3); */
+
+ /* фон кнопок фільру #F5F4FA */
+ 
+ :root {
+  --primary-text-color: #757575;
+  --title-text-color:#212121;
+  --accent-color: #2196F3;
+  --primary-color-background: #F5F5F5;
+  --logo-header-color: #000000;
+  --white-color-background: #FFFFFF;
+  --footer-color-background: #2F303A;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+
+ }
+ 
+ body {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color-background);
+ }
+
+ .header {
+  background-color: var(--white-color-background);
+}
+
+.list {
+  list-style: none;
+}
+
+/* logo */
+.header .logo {
+  color: var(--logo-header-color);
+}
+
+.footer .logo {
+  color: var(--white-color-background);
+}
+ .logo-accent {
+  color: var(--accent-color);
+ }
+
+ /* Site nav */
+ .site-nav .link {
+  color: var(--title-text-color);
+ }
+
+ .site-nav .link:hover,
+ .site-nav .link:focus {
+    color: var(--accent-color);
+  }
+
+ .auth-nav .list:hover,
+ .auth-nav .list:focus {
+  color: var(--accent-color);
+ }
+
+ .auth-nav .list {
+  color: var(--primary-text-color);
+ }
+ 
+ /* Title section */
+ .section-title {
+  color: var(--title-text-color);
+ }
+
+ /* benefits */
+ .benefits .title {
+  color: var(--title-text-color);
+ }
+
+ /* team */
+ .team .title{
+  color: var(--title-text-color);
+ }
+
+
+ /* footer */
+ .footer {
+  background-color: var(--footer-color-background);
+ }
+
+ .footer .address {
+  color: var(--footer-text-color);
+ }
+ .footer .google-map {
+  color: var(--white-color-background);
+ }
+
+ .footer .address:hover,
+ .footer .address:focus {
+   color: var(--accent-color);
+ }
