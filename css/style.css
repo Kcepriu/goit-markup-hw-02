@@ -13,26 +13,34 @@
 
  /* фон кнопок фільру #F5F4FA */
  
+
+
  :root {
   --primary-text-color: #757575;
   --title-text-color:#212121;
   --accent-color: #2196F3;
   --primary-color-background: #F5F5F5;
   --logo-header-color: #000000;
-  --white-color-background: #FFFFFF;
-  --footer-color-background: #2F303A;
+  --primary-white-color: #FFFFFF;
+  --second-color-background: #2F303A;
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --primary-button-background: #F5F4FA;
-
+  
  }
  
+ /* letter-spacing: logo */
+
+
  body {
   color: var(--primary-text-color);
   background-color: var(--primary-color-background);
+
+  font-family: roboto, sans-serif;
+  letter-spacing: 0.03em;
  }
 
  .header {
-  background-color: var(--white-color-background);
+  background-color: var(--primary-white-color);
 }
 
 .list {
@@ -40,20 +48,39 @@
 }
 
 /* logo */
+.logo {  
+  font-family: raleway, sans-serif;  
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
 .header .logo {
   color: var(--logo-header-color);
 }
 
 .footer .logo {
-  color: var(--white-color-background);
+  color: var(--primary-white-color);
 }
  .logo-accent {
   color: var(--accent-color);
  }
 
  /* Site nav */
+ .site-nav, 
+ .auth-nav {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+ }
+ 
  .site-nav .link {
   color: var(--title-text-color);
+ }
+ 
+ .site-nav .link.current {
+   color: var(--accent-color);
  }
 
  .site-nav .link:hover,
@@ -61,21 +88,35 @@
     color: var(--accent-color);
   }
 
-.site-nav .link.current {
-  color: var(--accent-color);
+.auth-nav .link {
+  color: var(--primary-text-color);
 }
- .auth-nav .list:hover,
- .auth-nav .list:focus {
+
+ .auth-nav .link:hover,
+ .auth-nav .link:focus {
   color: var(--accent-color);
  }
 
- .auth-nav .list {
-  color: var(--primary-text-color);
+/* Hero */
+ .hero {
+  background-color: var(--second-color-background);
+  letter-spacing: 0.06em;
  }
- 
+
+ .hero-title {
+  color: var(--primary-white-color);
+ }
+ .hero .button {
+   letter-spacing: inherit;
+ }
+
  /* Title section */
  .section-title {
   color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
  }
 
  /* benefits */
@@ -91,18 +132,24 @@
 /* portfolio */
  .portfolio .title {
    color: var(--title-text-color);
+   letter-spacing: 0.06em;
  }
 
  /* footer */
  .footer {
-  background-color: var(--footer-color-background);
+  background-color: var(--second-color-background);
  }
 
  .footer .address {
   color: var(--footer-text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
  }
+ /* TODO  */
+ /* отут привʼязка до послідовності. Може треба якось по іншому привʼязати */
  .footer .address-map {
-  color: var(--white-color-background);
+  color: var(--primary-white-color);
  }
 
  .footer .address:hover,
@@ -115,16 +162,18 @@
   color: var(--title-text-color);
   background-color: var(--primary-button-background);
   cursor: pointer;
+  letter-spacing: inherit;
 
+  font-family: roboto, sans-serif;
  }
  
  .button.primary {
-  color: var(--white-color-background);
+  color: var(--primary-white-color);
   background-color: var(--accent-color);
  }
  
  .button.filter:hover,
  .button.filter:focus {
-  color: var(--white-color-background);
+  color: var(--primary-white-color);
   background-color: var(--accent-color);
  }
