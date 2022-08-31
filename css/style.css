@@ -1,21 +1,4 @@
-/* основний колір тексту #757575; */
-/* Допоміжний колір тексту  #212121; */
-/* колір фону #F5F5F5 */
-/* колір фону хедера  #FFFFFF; */
-/* колір фону футера #2F303A; */
-
-/* текст лого #000000 */
-
-/* колір акценту  #2196F3 */
-/* колір контактів футера  rgba(255, 255, 255, 0.6); */
-
-/* колір лого background: linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #2196F3, #2196F3); */
-
- /* фон кнопок фільру #F5F4FA */
- 
-
-
- :root {
+:root {
   --primary-text-color: #757575;
   --title-text-color:#212121;
   --accent-color: #2196F3;
@@ -25,29 +8,31 @@
   --second-color-background: #2F303A;
   --footer-text-color: rgba(255, 255, 255, 0.6);
   --primary-button-background: #F5F4FA;
-  
- }
- 
- /* letter-spacing: logo */
+}
 
-
- body {
+/* Global */
+body {
   color: var(--primary-text-color);
   background-color: var(--primary-color-background);
 
   font-family: roboto, sans-serif;
   letter-spacing: 0.03em;
- }
-
- .header {
-  background-color: var(--primary-white-color);
 }
 
 .list {
   list-style: none;
 }
 
-/* logo */
+.link {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary-white-color);
+}
+
+/* Logo */
 .logo {  
   font-family: raleway, sans-serif;  
   font-weight: 700;
@@ -75,105 +60,148 @@
   letter-spacing: 0.02em;
  }
  
- .site-nav .link {
+.site-nav .link {
   color: var(--title-text-color);
- }
+}
  
- .site-nav .link.current {
+.site-nav .link.current {
    color: var(--accent-color);
- }
-
- .site-nav .link:hover,
- .site-nav .link:focus {
-    color: var(--accent-color);
-  }
-
-.auth-nav .link {
-  color: var(--primary-text-color);
 }
 
- .auth-nav .link:hover,
- .auth-nav .link:focus {
-  color: var(--accent-color);
- }
+.site-nav .link:hover,
+.site-nav .link:focus {
+    color: var(--accent-color);
+}
 
-/* Hero */
- .hero {
+.auth-nav .link {
+  color: inherit;
+}
+
+.auth-nav .link:hover,
+.auth-nav .link:focus {
+  color: var(--accent-color);
+}
+
+/* Hero section*/
+.hero {
   background-color: var(--second-color-background);
   letter-spacing: 0.06em;
- }
+}
 
- .hero-title {
+.hero-title {
   color: var(--primary-white-color);
- }
- .hero .button {
-   letter-spacing: inherit;
- }
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  text-transform: uppercase;
+}
 
- /* Title section */
- .section-title {
+.hero .button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+/* Title section */
+.section-title {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
- }
+}
 
- /* benefits */
- .benefits .title {
+/* Benefits section*/
+.benefits {
+   font-size: 14px;
+   line-height: 1.71;
+}
+
+.benefits .title {
   color: var(--title-text-color);
- }
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
 
- /* team */
- .team .title{
+ /* Team  section*/
+.team {
+  font-size: 16px;
+  line-height: 1.19;
+} 
+.team .title{
   color: var(--title-text-color);
- }
+  /* font-size - не наслідує з попереднього. Чомусь перекриває h3 таблиці стлів користувача */
+  font-size: 16px;
+  line-height: 1.19;
+  font-weight: 500;
+}
 
-/* portfolio */
- .portfolio .title {
+/* Portfolio section*/
+.portfolio {
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.portfolio .title {
    color: var(--title-text-color);
-   letter-spacing: 0.06em;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
  }
 
- /* footer */
- .footer {
+.portfolio .link:visited {
+  color: inherit;
+}
+
+ /* Footer */
+.footer {
   background-color: var(--second-color-background);
- }
+}
 
- .footer .address {
+.footer .address {
   color: var(--footer-text-color);
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
- }
- /* TODO  */
+  font-style: normal;
+}
+
+/* TODO  */
  /* отут привʼязка до послідовності. Може треба якось по іншому привʼязати */
- .footer .address-map {
+.footer .address-map {
   color: var(--primary-white-color);
- }
+}
 
- .footer .address:hover,
- .footer .address:focus {
+.footer .address:hover,
+.footer .address:focus {
    color: var(--accent-color);
- }
+}
 
- /* Button */
- .button {  
+/* Button */
+.button {  
   color: var(--title-text-color);
   background-color: var(--primary-button-background);
   cursor: pointer;
-  letter-spacing: inherit;
 
-  font-family: roboto, sans-serif;
- }
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  
+  font-family: inherit;
+  letter-spacing: inherit;
+}
  
- .button.primary {
+.button.primary {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
- }
+}
  
- .button.filter:hover,
- .button.filter:focus {
+.button.filter:hover,
+.button.filter:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
- }
+}
