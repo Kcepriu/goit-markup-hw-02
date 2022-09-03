@@ -175,9 +175,7 @@ body {
   font-style: normal;
 }
 
-/* TODO  */
-/* отут привʼязка до послідовності. Може треба якось по іншому привʼязати */
-.footer .address-map {
+.footer .address.address-map {
   color: var(--primary-white-color);
 }
 
